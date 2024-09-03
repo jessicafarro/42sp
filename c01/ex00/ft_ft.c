@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 10:19:32 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/01 10:19:32 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/03 13:50:30 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/03 14:54:55 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void ft_ft(int *nbr)
-{
-    *nbr = 42;
-}
-int main(void)
-{
-    int number;
+void	ft_ft(int *nbr);
 
-    ft_ft(&number);
-    printf("The valor of 'number' is: %d\n", number);
-
-    return 0;
+/* int main(void)
+{
+	int correcao = 8;
+	ft_ft(&correcao);
+} */
+void	ft_ft(int *nbr)
+{
+	*nbr = 42;
+	printf("%d", *nbr);
 }

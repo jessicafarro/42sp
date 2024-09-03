@@ -3,32 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 10:32:05 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/01 10:32:05 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/03 16:59:13 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod){
-
-    *div = a/b;
-    *mod = a%b;   
-    
-}
-int		main(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int a;
-	int b;
-	int div;
-	int mod;
+	if (a > 0 || b > 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 
-	a = 10;
-	b = 5;
-	div = 0;
-	mod = 0;
-	ft_div_mod(a, b, &div, &mod);
-	printf("%d\n%d\n", div, mod);
-	return (0);
+}
+int main()
+{
+    int num1 = 10;
+    int num2 = 3;
+    int division;
+    int remainder;
+
+    ft_div_mod(num1, num2, &division, &remainder);
+
+    printf("Resultado da divisão: %d\n", division);
+    printf("Resto da divisão: %d\n", remainder);
+
+    return 0;
 }
