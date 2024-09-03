@@ -3,52 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 19:39:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/08/31 19:39:45 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/03 10:43:35 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/03 11:29:44 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_putnbr(int nb);
-int ft_countdig(int nb);
+void	ft_putnbr(int nb);
+void	ft_putchar(char c);
 
-int main() 
+void	ft_putchar(char c)
 {
-    ft_putnbr(-12378906);
-    return(0);
+	write(1, &c, 1);
 }
 
 void	ft_putnbr(int nb)
 {
-    char charNumbers[10] = {'0','1','2','3','4','5','6','7','8','9'}; // We should to make this array cause write function not display int variables
-    int i = 0;
-    int isNeg = 0;
-
-    if (nb < 0){ //test if is negative number
-        isNeg = 1;  
-        nb *= -1; //Only positibe is allowed
-    }
-
-    int arr[ft_countdig(nb)]; //make an array with length of int    
-
-    while (nb > 0) { // iterate with integer and put on array
-        int digit = nb % 10;
-        arr[i] = digit;
-        i++;
-        nb /= 10;
-    } 
-    if (isNeg) //if is negative put minus signal
-        write(1, "-", 1);
-    for(int a = i  - 1 ; a >= 0; a--) {   //make a reverse loop to put on screen the int     
-        write(1, &charNumbers[arr[a]], 1);
-    }
+	if (nb == -2147483648)
+	{
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
+	}
+	else
+	{
+		if (nb < 0)
+		{
+			ft_putchar('-');
+			ft_putnbr(-nb);
+		}
+		else
+		{
+			if (nb > 9)
+				ft_putnbr(nb / 10);
+			ft_putchar('0' + (nb % 10));
+		}
+	}
 }
-int	ft_countdig(int nb) // function count int
+
+int main(void)
 {
-    int ret=1;
-    while (nb/=10) ret++;
-    return ret;
+	ft_putnbr(-2147483648);
+	write(1, "\n", 1);
+	ft_putnbr(2147483647);
+	write(1, "\n", 1);
+	ft_putnbr(48);
+	write(1, "\n", 1);
 }

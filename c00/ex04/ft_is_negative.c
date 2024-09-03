@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 15:49:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/08/31 15:49:27 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/02 12:33:52 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/03 10:37:45 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int main(void) {
-    ft_is_negative(-42);
-    ft_is_negative(42);
-    return 0;
+void	ft_is_negative(int n)
+{
+	char	answer;
+
+	answer = 'N';
+	if (n > 0)
+		answer = 'P';
+	write (1, &answer, 1);
 }
 
-void ft_is_negative(int n){   
-    char answer = 'N'; 
-    if (n > 0 ) answer = 'P';      
-    write(1, &answer, 1);
+/*int main(void)
+{
+	ft_is_negative(-42);
+	ft_is_negative(42);
+	return 0;
 }
+*/

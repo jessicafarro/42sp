@@ -3,24 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <mjesdos-s@student.42.fr>           +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/31 15:29:35 by jesdos-s            #+#    #+#           */
-/*   Updated: 2024/08/31 15:29:35 by jesdos-s           ###   ########.fr     */
+/*   Created: 2024/09/02 10:30:52 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/02 18:05:08 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
+void	ft_print_alphabet(void);
 
-void ft_print_alphabet(void);
+void	ft_print_alphabet(void)
+{
+	char alphabet;
 
-int main(void) {
-    ft_print_alphabet();
-    return 0;
+	alphabet = 'a';
+	while(alphabet <= 'z'){
+		write(1, &alphabet,1);
+		alphabet = alphabet +1;
+	}
 }
 
-void ft_print_alphabet(void){    
-    char alphabet[] = "abcdefghijklmnopqrstuvxyz";
-    write(1, &alphabet, 26);
-}
+/* int	main(void)
+{
+	ft_print_alphabet();
+	return 0;
+} */

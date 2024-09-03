@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinda-si <vinda-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 16:50:10 by vinda-si          #+#    #+#             */
-/*   Updated: 2024/08/26 16:57:42 by vinda-si         ###   ########.fr       */
+/*   Created: 2024/09/02 12:34:15 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/03 10:42:35 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb2(int n);
-
-int main() 
+void	ft_print_comb2(void)
 {
-    ft_print_comb2(2);
-    return(0);
+	int		first_duo;
+	int		second_duo;
+	char	number[5];
+
+	first_duo = 0;
+	while (first_duo <= 98)
+	{
+		second_duo = first_duo + 1;
+		while (second_duo <= 99)
+		{
+			number[0] = first_duo / 10 + '0';
+			number[1] = first_duo % 10 + '0';
+			number[2] = ' ';
+			number[3] = second_duo / 10 + '0';
+			number[4] = second_duo % 10 + '0';
+			write(1, number, 5);
+			if (first_duo != 98 || second_duo != 99)
+				write(1, ",", 2);
+			second_duo++;
+		}
+		first_duo++;
+	}
 }
 
-void	ft_print_comb2(int n)
-{  
-    char charNumbers[10] = {'0','1','2','3','4','5','6','7','8','9'}; // We should to make this array cause write function not display int variables
-    if ( n <= 0 || n > 10)
-        return;
-    for(int a = 0; a <= 9; a++) {         //Iterate first collumn 
-        for(int b = 0; b <= 9; b++) {     //Iterate second collumn
-            if ( (b >= a + 1) ) { //Make logical validation
-                write(1, &charNumbers[a], 1); //Print collumn
-                write(1, &charNumbers[b], 1);
-                if (!(a == 8 && b == 9 )) // Comma control of last combination
-                    write(1, ", ", 2); 
-            }
-        }
-    }
-}
+/* int main() 
+{
+	ft_print_comb2();
+	return(0);
+} */

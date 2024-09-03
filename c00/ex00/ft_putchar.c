@@ -1,29 +1,24 @@
-/*# **************************************************************************** #
-  #                                                                              #
-  #                                                         :::      ::::::::    #
-  #    c00                                                :+:      :+:    :+:    #
-  #                                                     +:+ +:+         +:+      #
-  #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
-  #                                                 +#+#+#+#+#+   +#+            #
-  #    Created: 2024/08/30 11:53:34 by marvin            #+#    #+#              #
-  #    Updated: 2024/08/30 11:53:34 by marvin           ###   ########.fr        #
-  #                                                                              #
-  # **************************************************************************** #*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/02 10:30:28 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/03 10:52:04 by jesdos-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//Defining the standart input output lib
-#include <stdio.h>
+#include <unistd.h>
 
-// Function declaration
-void ft_putchar(char c);
-
-//Declaration of a main block
-int main() {
-    ft_putchar('R'); // Call the function with one caracter
-    return 0;
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
 
-// Function definition
-void ft_putchar(char c) {
-    write(1, &c, 1);
-}
-
+/* int	main(void)
+{
+	ft_putchar('R');
+	return 0;
+}  */
