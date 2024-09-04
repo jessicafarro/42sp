@@ -6,7 +6,7 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 15:29:35 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/03 10:52:12 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/04 17:56:38 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ void	ft_print_numbers(void)
 		write (1, &numbers, 1);
 		numbers = numbers +1;
 	}
-	write (1, "\n", 2);
+	write (1, "\n", 1);
 }
 
 /* int	main(void)
 {
 	ft_print_numbers ();
 	return (0);
-} */
+}
+ */

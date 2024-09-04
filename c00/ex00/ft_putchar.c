@@ -6,7 +6,7 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 10:30:28 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/03 10:52:04 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/04 17:56:53 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_putchar(char c)
 
 /* int	main(void)
 {
-	ft_putchar('R');
+	ft_putchar('a');
 	return 0;
-}  */
+} */

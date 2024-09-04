@@ -6,7 +6,7 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 10:32:05 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/03 16:59:13 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/03 17:50:25 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 		*div = a / b;
 		*mod = a % b;
 	}
-
 }
+
 int main()
 {
     int num1 = 10;

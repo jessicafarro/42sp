@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/02 10:30:52 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/02 18:05:08 by jesdos-s         ###   ########.fr       */
+/*   Created: 2024/09/04 12:46:41 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/04 17:56:49 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ void	ft_print_alphabet(void);
 
 void	ft_print_alphabet(void)
 {
-	char alphabet;
+	char	alphabet;
 
 	alphabet = 'a';
-	while(alphabet <= 'z'){
-		write(1, &alphabet,1);
+	while (alphabet <= 'z')
+	{
+		write (1, &alphabet, 1);
 		alphabet = alphabet +1;
 	}
 }
@@ -28,5 +29,5 @@ void	ft_print_alphabet(void)
 /* int	main(void)
 {
 	ft_print_alphabet();
-	return 0;
+	return (0);
 } */

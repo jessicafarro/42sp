@@ -6,7 +6,7 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 10:43:35 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/03 11:29:44 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/04 17:56:18 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	ft_putnbr(int nb)
 		}
 	}
 }
-
 /* int main(void)
 {
 	ft_putnbr(-2147483648);
@@ -51,5 +50,4 @@ void	ft_putnbr(int nb)
 	write(1, "\n", 1);
 	ft_putnbr(48);
 	write(1, "\n", 1);
-}
- */
+} */
