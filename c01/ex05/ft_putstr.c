@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 10:42:13 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/01 10:42:13 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/05 10:41:44 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 void	ft_putstr(char *str)
 {
-    int i;
-    while(str[i] != '\0')
-        write(1, &str[i++], 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
-int main() 
+
+/* int main(void)
 {
-    char arr[] = {'4','2','-','F','T','W', '\n'};
-	ft_putstr(arr);
+	ft_putstr("São Paulo");
 	return 0;
 }
+ */

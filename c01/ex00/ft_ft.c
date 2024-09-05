@@ -5,22 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/03 13:50:30 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/03 14:54:55 by jesdos-s         ###   ########.fr       */
+/*   Created: 2024/09/04 10:38:37 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/04 20:50:00 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_ft(int *nbr);
-
-/* int main(void)
-{
-	int correcao = 8;
-	ft_ft(&correcao);
-} */
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-	printf("%d", *nbr);
 }
+
+/* int main()
+{
+	int number = 0;
+	printf ft_ft(&number);
+	return 0;
+} */

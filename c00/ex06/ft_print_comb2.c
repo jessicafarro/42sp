@@ -6,7 +6,7 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 12:34:15 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/04 17:56:21 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/05 12:28:31 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_print_comb2(void)
 			number[4] = second_duo % 10 + '0';
 			write(1, number, 5);
 			if (first_duo != 98 || second_duo != 99)
-				write(1, ",", 2);
+				write(1, ", ", 2);
 			second_duo++;
 		}
 		first_duo++;

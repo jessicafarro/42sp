@@ -1,44 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 10:28:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/05 16:41:04 by jesdos-s         ###   ########.fr       */
+/*   Created: 2024/09/03 19:24:54 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/05 10:32:55 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	c;
-	int	d;
+	int	buffer1;
+	int	buffer2;
 
-	d = 0;
-	c = 0;
-	c = *a;
-	d = *b;
-	*a = d;
-	*b = c;
+	buffer1 = *a / *b;
+	buffer2 = *a % *b;
+	*a = buffer1;
+	*b = buffer2;
 }
 
-/* int	main()
+/* int	main(void)
 {
-    int num1 = 100;
-    int num2 = 200;
+	int	a;
+	int	b;
 
-    printf("Valores antes da troca:\n");
-    printf("num1 = %d\n", num1);
-    printf("num2 = %d\n", num2);
-
-    ft_swap(&num1, &num2);
-
-    printf("Valores depois da troca:\n");
-    printf("num1 = %d\n", num1);
-    printf("num2 = %d\n", num2);
-
-    return 0;
-} */
+	a = 15;
+	b = 54;
+	printf("%d\n%d\n",a,b);
+	ft_ultimate_div_mod(&a,&b);
+	printf("%d\n%d\n",a,b);
+}
+ */

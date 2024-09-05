@@ -3,26 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 11:34:12 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/01 11:34:12 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/04 11:14:08 by jesdos-s          #+#    #+#             */
+/*   Updated: 2024/09/05 11:41:06 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_strlen(char *str)
 {
-    int i;
-    while(str[i] != '\0')
-        i++;
-     return i;   
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-int main() 
+/* 
+int main(void)
 {
-    int i;
-    char arr[] = {'4','2','-','F','T','W'};
-	i = ft_strlen(arr);
-    printf("lngt: %d", i);
+	char str[] = "gato";
+	int length;
+
+	length = ft_strlen(str);
+
+	printf("O comprimento da string '%s' é: %d\n", str, length);
 
 	return 0;
-}
+} */

@@ -6,36 +6,35 @@
 /*   By: jesdos-s <jesdos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 14:32:56 by jesdos-s          #+#    #+#             */
-/*   Updated: 2024/09/03 16:57:35 by jesdos-s         ###   ########.fr       */
+/*   Updated: 2024/09/05 16:51:26 by jesdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_swap(int *a, int *b)
-{
-	int	c;
-	int	d;
+void	ft_ultimate_ft(int *********nbr);
 
-	d = 0;
-	c = 0;
-	c = *a;
-	d = *b;
-	*a = d;
-	*b = c;
+void	ft_ultimate_ft(int *********nbr)
+{
+	*********nbr = 42;
 }
 
-/* int	main(void)
+/* int main(void)
 {
-	int	x = 5;
-	int	y = 10;
+	int n = 0;
+	int *p1 = &n;
+	int **p2 = &p1;
+	int ***p3 = &p2;
+	int ****p4 = &p3;
+	int *****p5 = &p4;
+	int ******p6 = &p5;
+	int *******p7 = &p6;
+	int ********p8 = &p7;
+	int *********p9 = &p8;
 
-	printf("Antes da troca:\n");
-	printf("x = %d\n", x);
-	printf("y = %d\n", y);
-	ft_swap(&x, &y);
-	printf("Depois da troca:\n");
-	printf("x = %d\n", x);
-	printf("y = %d\n", y);
-	return (0);
+	ft_ultimate_ft(p9);
+
+	printf("Valor de n: %d\n", n);
+
+	return 0;
 } */
